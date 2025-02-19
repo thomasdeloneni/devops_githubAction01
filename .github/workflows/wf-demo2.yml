@@ -1,0 +1,16 @@
+name: Workflow local
+on: [push, workflow_dispatch]
+jobs:
+  buildJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Simulation
+        run: echo "Building the project..."
+      
+  testJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Simulation
+        run: echo "Testing the project..."
+
+#workflow_dispatch: This event is used to trigger the workflow manually from Github.
